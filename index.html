@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sterownik rozmyty klimatyzacji</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<main>
+    <div class="wrapper">
+        <div class="app">
+            <h1>Sterowanie klimatyzacją</h1>
+
+            <div class="control">
+                <label for="temp">Temperatura w pomieszczeniu (°C)</label>
+                <div class="slider-container"><input id="temp" type="range" min="10" max="44" value="24" /></div>
+                <div class="value" id="tempValue">24°C</div>
+            </div>
+
+            <div class="control">
+                <label for="room">Wielkość pomieszczenia (m²)</label>
+                <div class="slider-container"><input id="room" type="range" min="10" max="60" value="30" /></div>
+                <div class="value" id="roomValue">30 m²</div>
+            </div>
+
+            <div class="power-box">
+                <label>Moc klimatyzacji</label>
+                <div class="power-bar-bg">
+                    <div class="power-bar" id="powerBar"></div>
+                </div>
+                <div class="power-value" id="powerValue">0%</div>
+            </div>
+
+            <div class="placeholder-box">
+                <div class="placeholder-icon placeholder-icon--cold">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3" stroke="#7a9ec7" stroke-width="2"/><path d="M12 8V6m0-3v3m0 0L9 4m3 2 3-2m1 8h2m3 0h-3m0 0 2-3m-2 3 2 3m-8 1v2m0 3v-3m0 0-3 2m3-2 3 2m-7-8H6m-3 0h3m0 0L4 9m2 3-2 3" stroke="#7a9ec7" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="placeholder-icon placeholder-icon--hot">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 13.111C20 20.222 13.956 22 10.933 22 8.29 22 3 20.222 3 13.111c0-2.782 1.461-4.65 2.86-5.716.778-.594 1.77-.003 1.87.971l.086.838c.105 1.02 1.033 1.857 1.893 1.298C11.394 9.407 12 6.775 12 5.333V5.01c0-1.43 1.444-2.35 2.602-1.512C17.165 5.35 20 8.584 20 13.11Z" stroke="#ff5346" stroke-width="1.5"/><path d="M8 18.445C8 21.289 10.489 22 11.733 22c1.09 0 3.267-.711 3.267-3.555 0-1.102-.59-1.845-1.16-2.274-.398-.299-.957-.03-1.094.449-.178.624-.823 1.016-1.152.456-.3-.512-.3-1.28-.3-1.743 0-.636-.64-1.048-1.155-.674C9.106 15.409 8 16.68 8 18.445Z" stroke="#ff5346" stroke-width="1.5"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
